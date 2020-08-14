@@ -1,11 +1,14 @@
 body {
-  width: 100%;
+  position: relative;
+  width: 375px;
+  margin: 0 auto;
   max-width: 100%;
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 14px;
   line-height: 1.14;
   font-weight: 300;
   color: #4F4F4F;
+  background-color: #E5E5E5;
   display: flex;
   flex-direction: column;
   min-height: 100vh;

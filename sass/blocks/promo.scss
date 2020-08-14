@@ -1,0 +1,26 @@
+.promo {
+  overflow: hidden;
+}
+
+.promo__img {
+  position: relative;
+  z-index: 5;
+  background-color: $yellow;
+  
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 90%;
+    left: 0;
+    right: 0;
+    transform: skewY(-5deg);
+    height: 50px;
+//    top: 95%;
+//    left: -10%;
+//    right: -5%;
+//    
+//    transform: rotate(-5deg);
+    background-color: $yellow;
+  }
+}
