@@ -16,11 +16,15 @@
     right: 0;
     transform: skewY(-5deg);
     height: 50px;
-//    top: 95%;
-//    left: -10%;
-//    right: -5%;
-//    
-//    transform: rotate(-5deg);
     background-color: $yellow;
   }
+}
+
+.promo__wrap {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-image: url(../img/images/bg-mobile.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }

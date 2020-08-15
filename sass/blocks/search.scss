@@ -1,0 +1,31 @@
+.search {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #C4C4C4;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.search__input {
+  display: block;
+  flex-grow: 1;
+  height: 30px;
+  text-align: center;
+  background-color: rgba(255,255,255,0);
+}
+
+.search__btn {
+  display: block;
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+  line-height: 30px;
+  text-align: center;
+  color: #4F4F4F;
+  
+  &:hover,
+  &:active {
+    opacity: 0.7;
+  }
+}

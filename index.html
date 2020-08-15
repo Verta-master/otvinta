@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -108,25 +109,116 @@
       <figure class="promo__img">
         <img src="img/images/bg-main.png" alt="ОТ ВИНТА">
       </figure>
-      <div class="wrapper">
+      <div class="wrapper promo__wrap">
         <p class="title">Выберите куда отправиться</p>
         <ul class="select">
           <li class="select__item">
-            <a href="#" class="select__btn">Куда</a>
-            
+            <a href="#" class="select__link select__link--ok">Куда</a>
+            <div class="select__drop">
+              <ul class="select__sublist">
+                <li>Краснодар</li>
+                <li>Сочи - Центр</li>
+                <li>Сочи - Адлер</li>
+                <li>Пятигорск</li>
+                <li>Сочи - Красная поляна</li>
+                <li>Минеральные Воды</li>
+                <li>Краснодар</li>
+                <li>Сочи - Центр</li>
+                <li>Сочи - Адлер</li>
+                <li>Пятигорск</li>
+                <li>Сочи - Красная поляна</li>
+                <li>Минеральные Воды</li>
+              </ul>
+              <form action="#" class="search">
+                <input type="text" class="search__input">
+                <button class="search__btn"><i class="fas fa-search"></i></button>
+              </form>
+            </div>
           </li>
           <li class="select__item">
-            <a href="#" class="select__btn">Откуда</a>
-            
+            <a href="#" class="select__link select__link--error">Откуда</a>
+            <div class="select__drop">
+              <ul class="select__sublist">
+                <li>Краснодар</li>
+                <li>Сочи - Центр</li>
+                <li>Сочи - Адлер</li>
+                <li>Пятигорск</li>
+                <li>Сочи - Красная поляна</li>
+                <li>Минеральные Воды</li>
+                <li>Краснодар</li>
+                <li>Сочи - Центр</li>
+                <li>Сочи - Адлер</li>
+                <li>Пятигорск</li>
+                <li>Сочи - Красная поляна</li>
+                <li>Минеральные Воды</li>
+              </ul>
+              <form action="#" class="search">
+                <input type="text" class="search__input">
+                <button class="search__btn"><i class="fas fa-search"></i></button>
+              </form>
+            </div>
           </li>
           <li class="select__item">
-            <a href="#" class="select__btn">Дата полета</a>
-            
+            <input class="select__date" name="away" type="text" placeholder="Дата полета" required>
           </li>
           <li class="select__item">
-            <a href="#" class="select__btn">Забронировать</a>
+            <a data-fancybox data-src="#final" href="javascript:;" class="btn select__btn">Забронировать</a>
+            <div style="display: none;" id="data" class="select__modal">
+              <p class="select__title">Введите  данные пассажиров</p>
+              <form action="#" class="select__form">
+                <div class="select__number">
+                  <button type="button" class="select__num"><i class="fas fa-arrow-left"></i></button>
+                  <label for="number" class="select__label">
+                    <input type="text" id="number" class="select__circle" value="1">
+                    <span>Количество пассажиров</span>
+                  </label>
+                  <button type="button" class="select__num"><i class="fas fa-arrow-right"></i></button>
+                </div>
+                <input type="text" class="select__input" placeholder="ФИО" value="Иванов Иван Иванович">
+                <input type="tel" class="select__input" placeholder="Контактный номер телефона">
+                <input type="email" class="select__input" placeholder="Ваш e-mail">
+                <textarea class="select__input" placeholder="Введите  вопрос"></textarea>
+              </form>
+            </div>
+            <div style="display: none;" id="final" class="select__final">
+              <div class="select__final-top">
+                <div class="select__header"><span>Иванов Иван Иванович</span></div>
+                <div class="select__body">
+                  <div class="select__route">
+                    <span>Сочи - Адлер</span>
+                    <i class="fas fa-arrow-right"></i>
+                    <span>Ялта</span>
+                  </div>
+                  <div class="select__book">Дата полета: <span>3 января 2020</span></div>
+                </div>
+                <div class="select__footer">
+                  <span>+7 (909) 002-89-89, ivanov@mail.ru</span>
+                </div>
+              </div>
+              <a href="#" class="select__final-btn">Ваш полет забронирован!</a>
+            </div>
+            <!-- Error window
+            <div style="display: none;" id="final" class="select__final">
+              <div class="select__final-top">
+                <div class="select__header select__header--error"><span>Нет ФИО</span></div>
+                <div class="select__body">
+                  <div class="select__route">
+                    <span>Откуда</span>
+                    <i class="fas fa-arrow-right"></i>
+                    <span>Куда</span>
+                  </div>
+                  <div class="select__book">Дата полета: <span>Не выбрано</span></div>
+                </div>
+                <div class="select__footer select__footer--error">
+                  <span>Некорректные данные</span>
+                </div>
+              </div>
+              <a href="#" class="select__final-btn select__final-btn--error">Ой, что-то не так, попробуй еще раз?</a>
+            </div>
+            -->
           </li>
         </ul>
+        <button type="button" class="scroll-down"></button>
       </div>
     </section>
     
@@ -730,6 +822,8 @@
   <script src="js/script.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.js"></script>
+  <script src="js/jquery.nicescroll.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
   <!-- Sliders -->
   <script>
@@ -770,6 +864,33 @@
           spaceBetween: 24,
         }
       }
+    });
+  </script>
+  
+  <!-- Scrollbar -->
+  <script>
+    $('.select__sublist').niceScroll({
+      cursorcolor: '#C4C4C4',
+      cursorwidth: '5px',
+      background: 'rgb(196,196,196,0.2)',
+      cursorborder: 0,
+      cursorborderradius: '3px',
+    });
+  </script>
+  
+  <!-- Select btns -->
+  <script>
+    $('.select__link').click(function(evt) {
+      evt.preventDefault();
+      $(this).toggleClass('select__link--open');
+      $(this).next().slideToggle();
+    });
+  </script>
+  
+  <!-- Calender -->
+  <script>
+    $(function() {
+      $('.select__date').datepicker();
     });
   </script>
 </body>

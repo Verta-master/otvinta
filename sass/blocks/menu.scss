@@ -98,6 +98,11 @@
     line-height: 13px;
     color: #E5E5E5;
   }
+  
+  a:hover,
+  a:active {
+    text-decoration: underline;
+  }
 }
 
 .menu__title {
