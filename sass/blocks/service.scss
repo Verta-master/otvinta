@@ -1,3 +1,108 @@
 .service {
+  padding-top: 30px;
+  padding-bottom: 115px;
+  color: #fff;
+  background-color: #838383;
   
+  .title {
+    font-size: 20px;
+    line-height: 23px;
+  }
+}
+
+.service__slider--01 {
+  margin-bottom: 22px;
+}
+
+.service__slide {
+  width: 190px;
+  box-sizing: border-box;
+  height: auto;
+  border-radius: 13px;
+  overflow: hidden;
+  color: #fff;
+  background-color: #4F4F4F;
+}
+
+.service__card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.service__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  padding: 8px;
+  color: $yellow;
+  text-align: center;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 15px;
+}
+
+.service__img {
+  position: relative;
+  width: 100%;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  img {
+    display: block;
+    flex: 0 0 auto;
+    height: 100%;
+    width: auto;
+    max-width: none;
+  }
+  
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 5px;
+    background-image: url(../../img/icons/card-points-dark.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  &::before {
+    top: -3px;
+  }
+  
+  &::after {
+    bottom: -3px;
+  }
+}
+
+.service__info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  font-size: 11px;
+  line-height: 13px;
+  
+  p {
+    margin-top: 0;
+  }
+}
+
+.service__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: auto;
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 13px;
+  color: $yellow;
 }

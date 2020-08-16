@@ -18,12 +18,12 @@
   }
   
   &::before {
-    bottom: 97%;
+    top: -20px;
     transform: skewY(5deg);
   }
   
   &::after {
-    top: 97%;
+    bottom: -20px;
     transform: skewY(-5deg);
   }
 }
@@ -68,11 +68,17 @@
 }
 
 .aircraft__header {
-  padding: 15px;
+  height: 42px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 15px;
   background-color: #FFC925;
 }
 
 .aircraft__title {
+  max-width: 100%;
   margin: 0;
   font-weight: bold;
   font-size: 13px;
