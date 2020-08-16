@@ -1,10 +1,28 @@
 .promo {
+  position: relative;
   overflow: hidden;
   
   .title {
     margin-bottom: 35px;
     font-size: 20px;
     line-height: 23px;
+  }
+  
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 5;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background-color: #4F4F4F;
+    clip-path: polygon(
+      0 0,
+      100% 100%,
+      100% 100%,
+      0 100%,
+    );
   }
 }
 
@@ -48,23 +66,6 @@
       0 100%,
     );
   }
-  
-  &::after {
-    content: "";
-    position: absolute;
-    z-index: 5;
-    bottom: -1px;
-    left: 0;
-    right: 0;
-    height: 40px;
-    background-color: #4F4F4F;
-    clip-path: polygon(
-      0 0,
-      100% 100%,
-      100% 100%,
-      0 100%,
-    );
-  }
 }
 
 //----------------------------------------
@@ -79,25 +80,27 @@
   
   .promo {
     background-color: $yellow;
-  }
-  
-  .promo__wrap {
-    padding-top: 0;
-    padding-left: 38px;
-    padding-right: 38px;
-    background-image: none;
-    
-    &::before {
-      display: none;
-    }
     
     &::after {
+      height: 60px;
       clip-path: polygon(
         0 100%,
         100% 0,
         100% 100%,
         0 100%,
       );
+    }
+  }
+  
+  .promo__wrap {
+    padding-top: 0;
+    padding-bottom: 80px;
+    padding-left: 38px;
+    padding-right: 38px;
+    background-image: none;
+    
+    &::before {
+      display: none;
     }
   }
   
@@ -110,11 +113,19 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 50px;
+    margin-top: 60px;
     width: 24px;
     height: 82px;
     background-image: url(../img/icons/mouse.png);
     background-repeat: no-repeat;
     background-size: contain;
+  }
+}
+
+//----------------------------------------
+@media (min-width: 1200px) {
+  .promo__wrap {
+    padding-left: 0;
+    padding-right: 0;
   }
 }

@@ -70,6 +70,7 @@
   .order {
     &::before {
       z-index: 3;
+      height: 90px;
       clip-path: polygon(
         0 0,
         100% 0,
@@ -80,6 +81,7 @@
   }
   
   .order__img::after {
+    height: 75px;
     clip-path: polygon(
       0 100%,
       100% 0,
@@ -91,5 +93,9 @@
   .order .title {
     font-size: 30px;
     line-height: 35px;
+  }
+  
+  .order .wrapper {
+    padding-top: 5px;
   }
 }

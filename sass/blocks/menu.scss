@@ -161,4 +161,42 @@ p.menu__title {
     font-size: 12px;
     line-height: 14px;
   }
+  
+  .menu__sublist {
+    margin-bottom: 12px;
+  }
+}
+
+//----------------------------------------
+@media (min-width: 1200px) {
+  .menu {
+    width: 494px;
+  }
+  
+  .menu__header {
+    padding: 18px 26px;
+    padding-right: 57px;
+  }
+  
+  .menu__open {
+    width: 46px;
+    height: 46px;
+    font-size: 26px;
+  }
+  
+  .menu__phone {
+    font-size: 20px;
+    line-height: 23px;
+  }
+  
+  .menu__title {
+    font-size: 20px;
+    line-height: 23px;
+  }
+  
+  .menu__item address,
+  .menu__sublist {
+    font-size: 15px;
+    line-height: 18px;
+  }
 }

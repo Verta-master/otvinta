@@ -44,3 +44,17 @@
     height: 23px;
   }
 }
+
+//----------------------------------------
+@media (min-width: 1200px) {
+  .social__link {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+  
+  .social__item {
+    margin-left: 4px;
+    margin-right: 5px;
+  }
+}

@@ -75,7 +75,12 @@
 
 //----------------------------------------
 @media (min-width: 768px) {
-  .footer__link {
+  .footer {
+    padding-top: 35px;
+  }
+  
+  .footer__link,
+  .footer address {
     font-size: 12px;
     line-height: 14px;
   }
@@ -88,5 +93,27 @@
     padding-bottom: 20px;
     font-size: 8px;
     line-height: 9px;
+  }
+  
+  .footer::after {
+    height: 70px;
+  }
+  
+  .footer__top {
+    padding-bottom: 10px;
+  }
+}
+
+//----------------------------------------
+@media (min-width: 1200px) {
+  .footer__link,
+  .footer address {
+    font-size: 15px;
+    line-height: 18px;
+  }
+  
+  .footer__bottom {
+    font-size: 10px;
+    line-height: 12px;
   }
 }

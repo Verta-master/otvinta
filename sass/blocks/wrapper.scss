@@ -1,7 +1,16 @@
 .wrapper {
   width: 100%;
+  max-width: 1136px;
   padding-left: 30px;
   padding-right: 30px;
   margin-left: auto;
   margin-right: auto;
+}
+
+//----------------------------------------
+@media (min-width: 1200px) {
+  .wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }

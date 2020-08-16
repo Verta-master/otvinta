@@ -68,24 +68,62 @@
 
 //----------------------------------------
 @media (min-width: 768px) {
+  .benefits {
+    padding-bottom: 160px;
+  }
+  
   .benefits__info {
-    width: 40%;
+    width: 42%;
     margin-left: auto;
   }
   
   .benefits__img {
     position: absolute;
-    bottom: 0;
+    bottom: 10px;
     left: 0;
     width: 500px;
+    overflow: hidden;
+    
+    img {
+      margin-left: -30px;
+    }
   }
   
   .benefits::after {
+    height: 100px;
     clip-path: polygon(
       0 0,
       100% 100%,
       100% 100%,
       0 100%,
     );
+  }
+  
+  .benefits__title {
+    font-size: 25px;
+    line-height: 29px;
+  }
+}
+
+//----------------------------------------
+@media (min-width: 1200px) {
+  .benefits__info {
+    width: 49%;
+  }
+  
+  .benefits__item {
+    font-size: 20px;
+    line-height: 23px;
+    
+    span {
+      font-size: 15px;
+      line-height: 18px;
+    }
+  }
+  
+  .benefits__img {
+    right: 50%;
+    left: auto;
+    width: auto;
   }
 }

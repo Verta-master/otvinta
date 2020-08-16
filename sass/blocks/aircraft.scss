@@ -128,8 +128,14 @@
 
 //----------------------------------------
 @media (min-width: 768px) {
+  .aircraft {
+    padding-bottom: 0;
+  }
+  
   .aircraft__subtitle {
     max-width: 100%;
+    margin-top: 0;
+    margin-bottom: 40px;
   }
   
   .aircraft__slide {
@@ -138,6 +144,11 @@
   
   .aircraft__header {
     height: 51px;
+  }
+  
+  .aircraft .title {
+    margin-top: 0;
+    margin-bottom: 10px;
   }
   
   .aircraft__title {
@@ -179,5 +190,16 @@
     background-image: url(../img/icons/mouse-side.png);
     background-repeat: no-repeat;
     background-size: contain;
+  }
+}
+
+//----------------------------------------
+@media (min-width: 1200px) {
+  .aircraft {
+    padding-bottom: 30px;
+  }
+  
+  .aircraft__scroll {
+    display: none;
   }
 }
