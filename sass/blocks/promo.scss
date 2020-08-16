@@ -2,6 +2,7 @@
   overflow: hidden;
   
   .title {
+    margin-bottom: 35px;
     font-size: 20px;
     line-height: 23px;
   }
@@ -10,23 +11,29 @@
 .promo__img {
   position: relative;
   z-index: 5;
+  padding-top: 10px;
+  padding-bottom: 40px;
   background-color: $yellow;
   
   &::after {
     content: "";
     position: absolute;
     z-index: -1;
-    bottom: -20px;
+    bottom: -30px;
     left: 0;
     right: 0;
-    transform: skewY(-5deg);
-    height: 50px;
+    transform: skewY(-8deg);
+    height: 60px;
     background-color: $yellow;
+  }
+  
+  img {
+    transform: scale(1.1);
   }
 }
 
 .promo__wrap {
-  padding-top: 50px;
+  padding-top: 45px;
   padding-bottom: 50px;
   background-image: url(../img/images/bg-mobile.png);
   background-repeat: no-repeat;

@@ -1,10 +1,13 @@
 .service {
-  padding-top: 30px;
+  position: relative;
+  z-index: 2;
+  padding-top: 20px;
   padding-bottom: 115px;
   color: #fff;
   background-color: #838383;
   
   .title {
+    margin-bottom: 25px;
     font-size: 20px;
     line-height: 23px;
   }
@@ -93,6 +96,7 @@
   
   p {
     margin-top: 0;
+//    margin-bottom: 15px;
   }
 }
 

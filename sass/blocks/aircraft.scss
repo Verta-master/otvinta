@@ -1,7 +1,7 @@
 .aircraft {
   position: relative;
   z-index: 5;
-  padding-top: 30px;
+  padding-top: 20px;
   padding-bottom: 30px;
   color: #F2F2F2;
   background-color: #4F4F4F;
@@ -19,12 +19,12 @@
   
   &::before {
     top: -20px;
-    transform: skewY(5deg);
+    transform: skewY(6deg);
   }
   
   &::after {
     bottom: -20px;
-    transform: skewY(-5deg);
+    transform: skewY(-6deg);
   }
 }
 
@@ -130,7 +130,7 @@
 }
 
 .aircraft__text {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .aircraft__price {

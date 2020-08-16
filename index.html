@@ -230,7 +230,7 @@
       <div class="swiper-container aircraft__slider aircraft__slider--01">
         <div class="swiper-wrapper">
           <div class="swiper-slide aircraft__slide">
-            <a href="#" class="aircraft__link">
+            <a data-fancybox data-src="#modal" href="javascript:;" class="aircraft__link">
               <div class="aircraft__header">
                 <p class="aircraft__title">ROBINSON R66</p>
               </div>
@@ -249,6 +249,51 @@
                 </div>
               </div>
             </a>
+            <!--  Modal window for each card  -->
+            <div style="display: none;" id="modal" class="modal">
+              <div class="modal__header">
+                <p class="modal__title">Вертолет BELL 429</p>
+              </div>
+              <div class="modal__body">
+                <div class="modal__wrap">
+                  <div class="modal__info">
+                    <p class="modal__subtitle">Технические характетистики ВС</p>
+                    <p>Bell 429 GlobalRanger — лёгкий многоцелевой вертолёт. Разработан американской фирмой Bell Helicopter Textron. Проектировался в первую очередь для предоставления экстренной медицинской помощи за пределами больницы. Первый полёт прототипа состоялся 27 февраля 2007 года. Сертификат типа вертолёт получил 1 июля 2009 года.</p>
+                    <p>
+                      Дальность полета: 449 миль<br>
+                      Количество пассажиров: 4 - 6 (зависит от комплектации борта)<br>
+                      Максимальная скорость: 178 миль/ч<br>
+                      Масса: 4 244 фунта<br>
+                      Крейсерская скорость: 170 миль/ч<br>
+                      Стоимость: 5 900 000–7 000 000 USD (2019 г.)<br>
+                      Тип двигателя: Pratt & Whitney Canada PW200
+                    </p>
+                    <div class="modal__price">
+                      <b>Цена/час</b><b>45 000<i class="fas fa-ruble-sign"></i></b>
+                    </div>
+                  </div>
+                  <div class="modal__imgs">
+                    <div class="swiper-container modal__slider">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide modal__slide">
+                          <img src="img/images/modal-1.jpg" alt="Вертолет BELL 429">
+                        </div>
+                        <div class="swiper-slide modal__slide">
+                          <img src="img/images/modal-2.jpg" alt="Вертолет BELL 429">
+                        </div>
+                        <div class="swiper-slide modal__slide">
+                          <img src="img/images/modal-1.jpg" alt="Вертолет BELL 429">
+                        </div>
+                        <div class="swiper-slide modal__slide">
+                          <img src="img/images/modal-2.jpg" alt="Вертолет BELL 429">
+                        </div>
+                      </div>
+                      <div class="swiper-scrollbar modal__scrollbar"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="swiper-slide aircraft__slide">
             <a href="#" class="aircraft__link">
@@ -756,7 +801,7 @@
         <div class="swiper-container service__slider service__slider--01">
           <div class="swiper-wrapper">
             <div class="swiper-slide service__slide">
-              <a href="#" class="service__card">
+              <a data-fancybox data-src="#service" href="javascript:;" class="service__card">
                 <div class="service__header">Аренда<br>вертолета</div>
                 <figure class="service__img">
                   <img src="img/images/service-1.jpg" alt="Аренда вертолета">
@@ -769,6 +814,49 @@
                   </div>
                 </div>
               </a>
+              <!--  Modal window #2 for each card  -->
+              <div style="display: none;" id="service" class="modal modal--service">
+                <div class="modal__header">
+                  <p class="modal__title">Аренда вертолета</p>
+                </div>
+                <div class="modal__top">
+                  <div class="swiper-container modal__slider2">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide modal__slide2">
+                        <img src="img/images/modal-3.jpg" alt="Вертолет BELL 429">
+                      </div>
+                      <div class="swiper-slide modal__slide2">
+                        <img src="img/images/modal-3.jpg" alt="Вертолет BELL 429">
+                      </div>
+                    </div>
+                    <div class="swiper-scrollbar modal__scrollbar2"></div>
+                  </div>
+                  <div class="modal__text">
+                    <p class="modal__title">Технические характетистики ВС</p>
+                    <p>Bell 429 GlobalRanger — лёгкий многоцелевой вертолёт. Разработан американской фирмой Bell Helicopter Textron. Проектировался в первую очередь для предоставления экстренной медицинской помощи за пределами больницы. Первый полёт прототипа состоялся 27 февраля 2007 года. Сертификат типа вертолёт получил 1 июля 2009 года.</p>
+                    <p>Bell 429 GlobalRanger — лёгкий многоцелевой вертолёт. Разработан американской фирмой Bell Helicopter Textron. Проектировался в первую очередь для предоставления экстренной медицинской помощи за пределами больницы. Первый полёт прототипа состоялся 27 февраля 2007 года. Сертификат типа вертолёт получил 1 июля 2009 года.</p>
+                    <p>Дальность полета: 449 миль<br>Количество пассажиров: 4 - 6 (зависит от комплектации борта)</p>
+                    <p>Проектировался в первую очередь для предоставления экстренной медицинской помощи за пределами больницы. Первый полёт прототипа состоялся 27 февраля 2007 года. Сертификат типа вертолёт получил 1 июля 2009 года.</p>
+                    <p>Bell 429 GlobalRanger — лёгкий многоцелевой вертолёт. Разработан американской фирмой Bell Helicopter Textron. Проектировался в первую очередь для предоставления экстренной медицинской помощи за пределами больницы.<br>Дальность полета: 449 миль<br>Количество пассажиров: 4 - 6 (зависит от комплектации борта) вертолёт. Разработан американской фирмой Bell Helicopter Textron. Проектировался в первую очередь для предоставления экстренной медицинской помощи за пределами больницы. Первый полёт прототипа состоялся 27 февраля 2007 года.</p>
+                  </div>
+                </div>
+                <div class="modal__bottom">
+                  <ul class="modal__tags">
+                    <li class="modal__tag"><a href="#">Аренда вертолета</a></li>
+                    <li class="modal__tag"><a href="#">Аренда яхты</a></li>
+                    <li class="modal__tag"><a href="#">Трансфер</a></li>
+                    <li class="modal__tag"><a href="#">Аренда гирокоптера</a></li>
+                    <li class="modal__tag"><a href="#">Аренда авто</a></li>
+                    <li class="modal__tag"><a href="#">Аренда воздушного шара</a></li>
+                    <li class="modal__tag"><a href="#">Бронирование отеля</a></li>
+                    <li class="modal__tag"><a href="#">Обучаюшие полеты</a></li>
+                    <li class="modal__tag"><a href="#">Обслуживание в аэропоту</a></li>
+                    <li class="modal__tag"><a href="#">ViP Консьерж</a></li>
+                    <li class="modal__tag"><a href="#">Сертификаты</a></li>
+                    <li class="modal__tag"><a href="#">Заявка на полет</a></li>
+                  </ul>
+                </div>
+              </div>
             </div>
             <div class="swiper-slide service__slide">
               <a href="#" class="service__card">
@@ -1009,7 +1097,7 @@
       }
     });
     
-    var mySwiper3 = new Swiper ('.service__slider--02', {
+    var mySwiper4 = new Swiper ('.service__slider--02', {
       simulateTouch: false,
       preventClicks: false,
       preventClicksPropagation: false,
@@ -1020,6 +1108,33 @@
       breakpoints: {
         768: {
           spaceBetween: 24,
+        }
+      }
+    });
+    
+    var mySwiper5 = new Swiper('.modal__slider', {
+      slidesPerView: 1,
+      slidesPerColumn: 2,
+      spaceBetween: 18,
+      scrollbar: {
+        el: '.modal__scrollbar',
+      },
+      breakpoints: {
+        480: {
+          slidesPerColumn: 1,
+        }
+      }
+    });
+    
+    var mySwiper6 = new Swiper('.modal__slider2', {
+      slidesPerView: 1,
+      spaceBetween: 26,
+      scrollbar: {
+        el: '.modal__scrollbar2',
+      },
+      breakpoints: {
+        480: {
+          slidesPerColumn: 1,
         }
       }
     });
