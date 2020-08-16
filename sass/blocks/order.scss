@@ -33,6 +33,12 @@
   z-index: 2;
   margin-bottom: 50px;
   
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
   &::before {
     content: "";
     position: absolute;

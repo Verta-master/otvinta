@@ -10,7 +10,7 @@
     content: "";
     position: absolute;
     z-index: 2;
-    bottom: 99.95%;
+    top: -38px;
     left: 0;
     right: 0;
     height: 40px;
@@ -96,6 +96,7 @@
   }
   
   .footer::after {
+    top: -68px;
     height: 70px;
   }
   
