@@ -17,8 +17,10 @@
     <div class="header__wrap">
       <div class="header__logo">
         <img src="img/images/logo.png" alt="Logo">
-        <b>ОТ ВИНТА</b>
-        <strong>АРЕНДА И ПРОДАЖА<br>ВЕРТОЛЕТОВ</strong>
+        <div class="header__text">
+          <b>ОТ ВИНТА</b>
+          <strong>АРЕНДА И ПРОДАЖА<br>ВЕРТОЛЕТОВ</strong>
+        </div>
       </div>
     </div>
   </header>
@@ -218,7 +220,7 @@
             -->
           </li>
         </ul>
-        <button type="button" class="scroll-down"></button>
+        <button type="button" class="promo__scroll"></button>
       </div>
     </section>
     
@@ -658,6 +660,7 @@
           </div>
         </div>
       </div>
+      <button type="button" class="aircraft__scroll"></button>
     </section>
     
     <section class="order">
@@ -1059,6 +1062,7 @@
       preventClicksPropagation: false,
       slidesPerView: 'auto',
       centeredSlides: true,
+      loop: true,
       freeMode: true,
       spaceBetween: 35,
       breakpoints: {

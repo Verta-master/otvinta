@@ -1,31 +1,10 @@
 .aircraft {
   position: relative;
-  z-index: 5;
+  z-index: 1;
   padding-top: 20px;
   padding-bottom: 30px;
   color: #F2F2F2;
   background-color: #4F4F4F;
-  
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    left: 0;
-    right: 0;
-    height: 50px;
-    background-color: #4F4F4F;
-  }
-  
-  &::before {
-    top: -20px;
-    transform: skewY(6deg);
-  }
-  
-  &::after {
-    bottom: -20px;
-    transform: skewY(-6deg);
-  }
 }
 
 .aircraft__subtitle {
@@ -141,4 +120,64 @@
   font-weight: bold;
   font-size: 13px;
   line-height: 15px;
+}
+
+.aircraft__scroll {
+  display: none;
+}
+
+//----------------------------------------
+@media (min-width: 768px) {
+  .aircraft__subtitle {
+    max-width: 100%;
+  }
+  
+  .aircraft__slide {
+    width: 264px;
+  }
+  
+  .aircraft__header {
+    height: 51px;
+  }
+  
+  .aircraft__title {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  
+  .aircraft__img {
+    height: 156px;
+    
+    &::after {
+      width: 264px;
+      background-image: url(../img/icons/card-points.svg);
+    }
+  }
+  
+  .aircraft__info {
+    padding: 18px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  
+  .aircraft__price {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  
+  .aircraft__slider {
+    margin-bottom: 40px;
+  }
+  
+  .aircraft__scroll {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    width: 71px;
+    height: 35px;
+    background-image: url(../img/icons/mouse-side.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 }

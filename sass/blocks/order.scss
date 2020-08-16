@@ -1,5 +1,6 @@
 .order {
   position: relative;
+  z-index: 1;
   padding-bottom: 35px;
   background-color: $yellow;
   
@@ -8,11 +9,28 @@
     font-size: 20px;
     line-height: 23px;
   }
+  
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 5;
+    top: -1px;
+    left: 0;
+    right: 0;
+    height: 45px;
+    background-color: #4F4F4F;
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 0,
+      0 100%,
+    );
+  }
 }
 
 .order__img {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   margin-bottom: 50px;
   
   &::before {
@@ -32,12 +50,46 @@
   &::after {
     content: "";
     position: absolute;
-    z-index: 2;
-    bottom: -20px;
+    z-index: 3;
+    bottom: -1px;
     left: 0;
     right: 0;
-    transform: skewY(7deg);
-    height: 50px;
+    height: 45px;
     background-color: $yellow;
+    clip-path: polygon(
+      0 0,
+      100% 100%,
+      100% 100%,
+      0 100%,
+    );
+  }
+}
+
+//----------------------------------------
+@media (min-width: 768px) {
+  .order {
+    &::before {
+      z-index: 3;
+      clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 100%,
+        0 0,
+      );
+    }
+  }
+  
+  .order__img::after {
+    clip-path: polygon(
+      0 100%,
+      100% 0,
+      100% 100%,
+      0 100%,
+    );
+  }
+  
+  .order .title {
+    font-size: 30px;
+    line-height: 35px;
   }
 }

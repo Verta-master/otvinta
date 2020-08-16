@@ -36,3 +36,43 @@
     text-transform: uppercase;
   }
 }
+
+//----------------------------------------
+@media (min-width: 768px) {
+  .header {
+    height: auto;
+    background-image: none;
+  }
+  
+  .header__logo {
+    display: flex;
+    align-items: flex-start;
+    
+    img {
+      display: block;
+      width: 164px;
+      height: auto;
+    }
+    
+    b {
+      font-size: 30px;
+      line-height: 35px;
+    }
+    
+    strong {
+      font-size: 11px;
+      line-height: 13px;
+    }
+  }
+  
+  .header__text {
+    padding-top: 12px;
+    margin-left: -20px;
+  }
+  
+  .header__wrap {
+    top: 30px;
+    left: 0;
+    padding: 0;
+  }
+}

@@ -9,34 +9,112 @@
 }
 
 .promo__img {
-  position: relative;
-  z-index: 5;
   padding-top: 10px;
   padding-bottom: 40px;
   background-color: $yellow;
-  
-  &::after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    bottom: -30px;
-    left: 0;
-    right: 0;
-    transform: skewY(-8deg);
-    height: 60px;
-    background-color: $yellow;
-  }
   
   img {
     transform: scale(1.1);
   }
 }
 
+.promo__scroll {
+  display: none;
+}
+
 .promo__wrap {
+  position: relative;
+  z-index: 1;
   padding-top: 45px;
   padding-bottom: 50px;
   background-image: url(../img/images/bg-mobile.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 5;
+    top: -1px;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background-color: $yellow;
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 0,
+      0 100%,
+    );
+  }
+  
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 5;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background-color: #4F4F4F;
+    clip-path: polygon(
+      0 0,
+      100% 100%,
+      100% 100%,
+      0 100%,
+    );
+  }
+}
+
+//----------------------------------------
+@media (min-width: 768px) {
+  .promo__img img {
+    transform: none;
+  }
+  
+  .promo__img {
+    padding: 0;
+  }
+  
+  .promo {
+    background-color: $yellow;
+  }
+  
+  .promo__wrap {
+    padding-top: 0;
+    padding-left: 38px;
+    padding-right: 38px;
+    background-image: none;
+    
+    &::before {
+      display: none;
+    }
+    
+    &::after {
+      clip-path: polygon(
+        0 100%,
+        100% 0,
+        100% 100%,
+        0 100%,
+      );
+    }
+  }
+  
+  .promo .title {
+    font-size: 30px;
+    line-height: 35px;
+  }
+  
+  .promo__scroll {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    width: 24px;
+    height: 82px;
+    background-image: url(../img/icons/mouse.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 }
