@@ -783,7 +783,9 @@ p.menu__title {
 @media (min-width: 768px) {
   .promo__img img {
     -webkit-transform: none;
-            transform: none; }
+            transform: none;
+    width: 100%;
+    height: auto; }
   .promo__img {
     padding: 0; }
   .promo {
@@ -1516,6 +1518,10 @@ textarea.select__input {
   position: relative;
   z-index: 2;
   margin-bottom: 50px; }
+  .order__img img {
+    display: block;
+    width: 100%;
+    height: auto; }
   .order__img::before {
     content: "";
     position: absolute;
@@ -1817,7 +1823,7 @@ textarea.select__input {
     content: "";
     position: absolute;
     z-index: 2;
-    bottom: 99.95%;
+    top: -38px;
     left: 0;
     right: 0;
     height: 40px;
@@ -1880,6 +1886,7 @@ textarea.select__input {
     font-size: 8px;
     line-height: 9px; }
   .footer::after {
+    top: -68px;
     height: 70px; }
   .footer__top {
     padding-bottom: 10px; } }
