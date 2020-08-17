@@ -507,16 +507,18 @@ h2,
     padding: 0; } }
 
 @media (min-width: 1200px) {
-  .header__logo img {
-    height: 215px;
-    width: auto; }
-  .header__logo b {
-    margin-right: 15px;
-    font-size: 50px;
-    line-height: 59px; }
-  .header__logo strong {
-    font-size: 20px;
-    line-height: 23px; }
+  .header__logo {
+    margin-left: -40px; }
+    .header__logo img {
+      height: 215px;
+      width: auto; }
+    .header__logo b {
+      margin-right: 15px;
+      font-size: 50px;
+      line-height: 59px; }
+    .header__logo strong {
+      font-size: 20px;
+      line-height: 23px; }
   .header__text {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -524,7 +526,9 @@ h2,
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-left: -90px; } }
+    margin-left: -90px; }
+  .header__wrap {
+    top: 50px; } }
 
 .menu {
   position: absolute;
@@ -819,7 +823,14 @@ p.menu__title {
 @media (min-width: 1200px) {
   .promo__wrap {
     padding-left: 0;
-    padding-right: 0; } }
+    padding-right: 0;
+    padding-bottom: 135px; }
+  .promo .title {
+    margin-top: 0; }
+  .promo::after {
+    height: 180px; }
+  .promo__scroll {
+    margin-top: 25px; } }
 
 .social {
   padding: 0;
@@ -1601,7 +1612,8 @@ textarea.select__input {
 
 @media (min-width: 1200px) {
   .aircraft {
-    padding-bottom: 30px; }
+    padding-top: 0;
+    padding-bottom: 10px; }
   .aircraft__scroll {
     display: none; } }
 
@@ -1678,9 +1690,17 @@ textarea.select__input {
     padding-top: 5px; } }
 
 @media (min-width: 1200px) {
+  .order {
+    padding-bottom: 130px; }
   .order::before {
     height: 1252px;
-    top: 50px; } }
+    top: 100px; }
+  .order__img::before {
+    height: 145px; }
+  .order__img::after {
+    height: 125px; }
+  .order__img {
+    margin-bottom: 20px; } }
 
 .benefits {
   position: relative;
@@ -1756,9 +1776,14 @@ textarea.select__input {
     line-height: 29px; } }
 
 @media (min-width: 1200px) {
+  .benefits {
+    padding-bottom: 265px; }
+    .benefits::after {
+      height: 240px; }
   .benefits__info {
-    width: 49%; }
+    width: 47%; }
   .benefits__item {
+    margin-bottom: 30px;
     font-size: 20px;
     line-height: 23px; }
     .benefits__item span {
@@ -1766,8 +1791,13 @@ textarea.select__input {
       line-height: 18px; }
   .benefits__img {
     right: 50%;
+    bottom: 80px;
     left: auto;
-    width: auto; } }
+    width: auto; }
+    .benefits__img img {
+      margin-left: -5px; }
+  .benefits__title {
+    margin-bottom: 40px; } }
 
 .service {
   position: relative;
@@ -1927,6 +1957,12 @@ textarea.select__input {
     margin-bottom: 30px; } }
 
 @media (min-width: 1290px) {
+  .service {
+    padding-top: 0;
+    padding-bottom: 230px; }
+    .service .title {
+      margin-top: 0;
+      margin-bottom: 65px; }
   .service__slider {
     width: 1275px;
     margin-left: auto;
@@ -2012,13 +2048,25 @@ textarea.select__input {
     padding-bottom: 10px; } }
 
 @media (min-width: 1200px) {
+  .footer {
+    padding-top: 25px; }
   .footer__link,
   .footer address {
     font-size: 15px;
     line-height: 18px; }
   .footer__bottom {
     font-size: 10px;
-    line-height: 12px; } }
+    line-height: 12px; }
+  .footer::after {
+    top: -103px;
+    height: 105px; } }
+
+@media (min-width: 1290px) {
+  .footer .wrapper {
+    width: 1275px;
+    max-width: 1275px; }
+  .footer__top {
+    padding-bottom: 35px; } }
 
 .modal {
   padding: 0;
@@ -2206,7 +2254,8 @@ textarea.select__input {
         -ms-flex-direction: column;
             flex-direction: column; }
   .modal__imgs {
-    width: 48%; }
+    width: 48%;
+    margin-top: 0; }
   .modal__subtitle {
     font-size: 20px;
     line-height: 23px; }
@@ -2216,7 +2265,7 @@ textarea.select__input {
     font-size: 20px;
     line-height: 23px; }
   .modal__slider {
-    height: 541px;
+    height: 500px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box; }
   .modal__slide {
@@ -2228,7 +2277,8 @@ textarea.select__input {
     background-color: #C4C4C4; }
   .modal__slide2 {
     width: 854px;
-    margin-right: 26px; }
+    margin-right: 26px;
+    margin-bottom: 25px; }
   .modal__top {
     padding: 30px; }
   .modal__text {
@@ -2250,4 +2300,5 @@ textarea.select__input {
     background-color: #838383; }
   .modal__bottom {
     padding: 30px;
+    padding-bottom: 20px;
     background-color: #C4C4C4; } }
