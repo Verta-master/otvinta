@@ -14,17 +14,14 @@
     content: "";
     position: absolute;
     z-index: 5;
-    top: -1px;
-    left: 0;
+    top: 0;
     right: 0;
-    height: 45px;
-    background-color: #4F4F4F;
-    clip-path: polygon(
-      0 0,
-      100% 0,
-      100% 0,
-      0 100%,
-    );
+    left: 0;
+    height: 346px;
+    background-image: url(../img/images/shape-1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right center;
   }
 }
 
@@ -43,14 +40,17 @@
     content: "";
     position: absolute;
     z-index: 5;
-    top: 0;
-    bottom: -20px;
-    right: 0;
+    top: -1px;
     left: 0;
-    background-image: url(../img/images/shape-1.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: right center;
+    right: 0;
+    height: 45px;
+    background-color: #4F4F4F;
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 0,
+      0 100%,
+    );
   }
   
   &::after {
@@ -73,7 +73,7 @@
 
 //----------------------------------------
 @media (min-width: 768px) {
-  .order {
+  .order__img {
     &::before {
       z-index: 3;
       height: 90px;
@@ -84,16 +84,21 @@
         0 0,
       );
     }
+    
+    &::after {
+      height: 75px;
+      clip-path: polygon(
+        0 100%,
+        100% 0,
+        100% 100%,
+        0 100%,
+      );
+    }
   }
   
-  .order__img::after {
-    height: 75px;
-    clip-path: polygon(
-      0 100%,
-      100% 0,
-      100% 100%,
-      0 100%,
-    );
+  .order::before {
+    height: 680px;
+    top: 60px;
   }
   
   .order .title {
@@ -103,5 +108,13 @@
   
   .order .wrapper {
     padding-top: 5px;
+  }
+}
+
+//----------------------------------------
+@media (min-width: 1200px) {
+  .order::before {
+    height: 1252px;
+    top: 50px;
   }
 }

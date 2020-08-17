@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.css">
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="css/select2.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -115,56 +116,32 @@
         <p class="title">Выберите куда отправиться</p>
         <ul class="select">
           <li class="select__item">
-            <a href="#" class="select__link select__link--ok">Куда</a>
-            <div class="select__drop">
-              <ul class="select__sublist">
-                <li>Краснодар</li>
-                <li>Сочи - Центр</li>
-                <li>Сочи - Адлер</li>
-                <li>Пятигорск</li>
-                <li>Сочи - Красная поляна</li>
-                <li>Минеральные Воды</li>
-                <li>Краснодар</li>
-                <li>Сочи - Центр</li>
-                <li>Сочи - Адлер</li>
-                <li>Пятигорск</li>
-                <li>Сочи - Красная поляна</li>
-                <li>Минеральные Воды</li>
-              </ul>
-              <form action="#" class="search">
-                <input type="text" class="search__input">
-                <button class="search__btn"><i class="fas fa-search"></i></button>
-              </form>
-            </div>
+            <select id="where" data-placeholder="Куда">
+              <option value=""></option>
+              <option value="1">Краснодар</option>
+              <option value="2">Сочи - Центр</option>
+              <option value="3">Сочи - Адлер</option>
+              <option value="4">Пятигорск</option>
+              <option value="5">Сочи - Красная поляна</option>
+              <option value="6">Минеральные Воды</option>
+            </select>
           </li>
           <li class="select__item">
-            <a href="#" class="select__link select__link--error">Откуда</a>
-            <div class="select__drop">
-              <ul class="select__sublist">
-                <li>Краснодар</li>
-                <li>Сочи - Центр</li>
-                <li>Сочи - Адлер</li>
-                <li>Пятигорск</li>
-                <li>Сочи - Красная поляна</li>
-                <li>Минеральные Воды</li>
-                <li>Краснодар</li>
-                <li>Сочи - Центр</li>
-                <li>Сочи - Адлер</li>
-                <li>Пятигорск</li>
-                <li>Сочи - Красная поляна</li>
-                <li>Минеральные Воды</li>
-              </ul>
-              <form action="#" class="search">
-                <input type="text" class="search__input">
-                <button class="search__btn"><i class="fas fa-search"></i></button>
-              </form>
-            </div>
+            <select id="from" data-placeholder="Откуда">
+              <option value=""></option>
+              <option value="1">Краснодар</option>
+              <option value="2">Сочи - Центр</option>
+              <option value="3">Сочи - Адлер</option>
+              <option value="4">Пятигорск</option>
+              <option value="5">Сочи - Красная поляна</option>
+              <option value="6">Минеральные Воды</option>
+            </select>
           </li>
           <li class="select__item">
             <input class="select__date" name="away" type="text" placeholder="Дата полета" required>
           </li>
           <li class="select__item">
-            <a data-fancybox data-src="#final" href="javascript:;" class="btn select__btn">Забронировать</a>
+            <a data-fancybox data-src="#data" href="javascript:;" class="btn select__btn">Забронировать</a>
             <div style="display: none;" id="data" class="select__modal">
               <p class="select__title">Введите  данные пассажиров</p>
               <form action="#" class="select__form">
@@ -180,8 +157,10 @@
                 <input type="tel" class="select__input" placeholder="Контактный номер телефона">
                 <input type="email" class="select__input" placeholder="Ваш e-mail">
                 <textarea class="select__input" placeholder="Введите  вопрос"></textarea>
+                <button type="submit" class="select__submit">Забронировать</button>
               </form>
             </div>
+            <!--  Final window   -->
             <div style="display: none;" id="final" class="select__final">
               <div class="select__final-top">
                 <div class="select__header"><span>Иванов Иван Иванович</span></div>
@@ -671,50 +650,26 @@
         <p class="title">Заявка на полет</p>
         <ul class="select">
           <li class="select__item">
-            <a href="#" class="select__link select__link--ok">Куда</a>
-            <div class="select__drop">
-              <ul class="select__sublist">
-                <li>Краснодар</li>
-                <li>Сочи - Центр</li>
-                <li>Сочи - Адлер</li>
-                <li>Пятигорск</li>
-                <li>Сочи - Красная поляна</li>
-                <li>Минеральные Воды</li>
-                <li>Краснодар</li>
-                <li>Сочи - Центр</li>
-                <li>Сочи - Адлер</li>
-                <li>Пятигорск</li>
-                <li>Сочи - Красная поляна</li>
-                <li>Минеральные Воды</li>
-              </ul>
-              <form action="#" class="search">
-                <input type="text" class="search__input">
-                <button class="search__btn"><i class="fas fa-search"></i></button>
-              </form>
-            </div>
+            <select id="where2" data-placeholder="Куда">
+              <option value=""></option>
+              <option value="1">Краснодар</option>
+              <option value="2">Сочи - Центр</option>
+              <option value="3">Сочи - Адлер</option>
+              <option value="4">Пятигорск</option>
+              <option value="5">Сочи - Красная поляна</option>
+              <option value="6">Минеральные Воды</option>
+            </select>
           </li>
           <li class="select__item">
-            <a href="#" class="select__link select__link--error">Откуда</a>
-            <div class="select__drop">
-              <ul class="select__sublist">
-                <li>Краснодар</li>
-                <li>Сочи - Центр</li>
-                <li>Сочи - Адлер</li>
-                <li>Пятигорск</li>
-                <li>Сочи - Красная поляна</li>
-                <li>Минеральные Воды</li>
-                <li>Краснодар</li>
-                <li>Сочи - Центр</li>
-                <li>Сочи - Адлер</li>
-                <li>Пятигорск</li>
-                <li>Сочи - Красная поляна</li>
-                <li>Минеральные Воды</li>
-              </ul>
-              <form action="#" class="search">
-                <input type="text" class="search__input">
-                <button class="search__btn"><i class="fas fa-search"></i></button>
-              </form>
-            </div>
+            <select id="from2" data-placeholder="Откуда">
+              <option value=""></option>
+              <option value="1">Краснодар</option>
+              <option value="2">Сочи - Центр</option>
+              <option value="3">Сочи - Адлер</option>
+              <option value="4">Пятигорск</option>
+              <option value="5">Сочи - Красная поляна</option>
+              <option value="6">Минеральные Воды</option>
+            </select>
           </li>
           <li class="select__item">
             <input class="select__date" name="away" type="text" placeholder="Дата полета" required>
@@ -736,6 +691,7 @@
                 <input type="tel" class="select__input" placeholder="Контактный номер телефона">
                 <input type="email" class="select__input" placeholder="Ваш e-mail">
                 <textarea class="select__input" placeholder="Введите  вопрос"></textarea>
+                <button type="submit" class="select__submit">Забронировать</button>
               </form>
             </div>
             <div style="display: none;" id="final" class="select__final">
@@ -1053,6 +1009,7 @@
   
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/select2.full.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.js"></script>
   <script src="js/jquery.nicescroll.min.js"></script>
@@ -1158,10 +1115,20 @@
   
   <!-- Select btns -->
   <script>
-    $('.select__link').click(function(evt) {
-      evt.preventDefault();
-      $(this).toggleClass('select__link--open');
-      $(this).next().slideToggle();
+    $("#where").select2({
+      width: "100%",
+    });
+    
+    $("#from").select2({
+      width: "100%",
+    });
+    
+    $("#where2").select2({
+      width: "100%",
+    });
+    
+    $("#from2").select2({
+      width: "100%",
     });
   </script>
   
