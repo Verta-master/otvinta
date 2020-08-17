@@ -420,6 +420,14 @@ textarea.select__input {
   border-radius: 0 0 13px 13px;
   border-top: 2px solid #4F4F4F;
   background-color: $yellow;
+  transition: ease-out 0.3s;
+  
+  &:hover,
+  &:active {
+    color: #fff;
+    background-color: #4F4F4F;
+    transition: ease-out 0.3s;
+  }
 }
 
 //----------------------------------------
