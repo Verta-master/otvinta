@@ -12,3 +12,11 @@ $('.menu__close').click(function() {
   $('.menu__body').slideUp();
   $('.menu').removeClass('menu--open');
 });
+
+//scroll to arrow anchors
+$('.promo__scroll').click(function() {
+  event.preventDefault();
+  var id  = $(this).attr('href');
+  var top = $(id).offset().top;
+  $('body, html').animate({scrollTop: top}, 500);
+});
