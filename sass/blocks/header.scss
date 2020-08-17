@@ -3,6 +3,15 @@
   height: 70px;
   background-color: #000;
   background-image: linear-gradient(to bottom, #000, #252525);
+  
+  &--internal {
+    background-color: $yellow;
+    background-image: none;
+    
+    .header__logo {
+      color: #4F4F4F;
+    }
+  }
 }
 
 .header__wrap {

@@ -24,6 +24,15 @@
       0 100%,
     );
   }
+  
+  &--internal {
+    padding-top: 100px;
+    background-color: $yellow;
+    
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .promo__img {
@@ -122,6 +131,18 @@
     background-repeat: no-repeat;
     background-size: contain;
   }
+  
+  .promo--internal {
+    padding-top: 150px;
+    
+    .promo__scroll {
+      display: none;
+    }
+    
+    .promo__wrap {
+      padding-bottom: 55px;
+    }
+  }
 }
 
 //----------------------------------------
@@ -142,5 +163,9 @@
   
   .promo__scroll {
     margin-top: 25px;
+  }
+  
+  .promo--internal {
+    padding-top: 265px;
   }
 }
