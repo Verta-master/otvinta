@@ -11,6 +11,10 @@
     font-size: 20px;
     line-height: 23px;
   }
+  
+  &--contacts {
+    background-color: rgba(255,255,255,0);
+  }
 }
 
 .service__slider--01 {
@@ -169,11 +173,19 @@
       margin-top: 0;
       margin-bottom: 65px;
     }
+    
+    &--contacts {
+      padding-bottom: 150px;
+    }
   }
   
   .service__slider {
     width: 1275px;
     margin-left: auto;
     margin-right: auto;
+    
+    &--03 {
+      width: 100%;
+    }
   }
 }
