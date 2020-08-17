@@ -113,8 +113,24 @@
 
 //----------------------------------------
 @media (min-width: 1200px) {
+  .order {
+    padding-bottom: 130px;
+  }
+  
   .order::before {
     height: 1252px;
-    top: 50px;
+    top: 100px;
+  }
+  
+  .order__img::before {
+    height: 145px;
+  }
+  
+  .order__img::after {
+    height: 125px;
+  }
+  
+  .order__img {
+    margin-bottom: 20px;
   }
 }

@@ -129,5 +129,18 @@
   .promo__wrap {
     padding-left: 0;
     padding-right: 0;
+    padding-bottom: 135px;
+  }
+  
+  .promo .title {
+    margin-top: 0;
+  }
+  
+  .promo::after {
+    height: 180px;
+  }
+  
+  .promo__scroll {
+    margin-top: 25px;
   }
 }

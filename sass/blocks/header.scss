@@ -80,6 +80,8 @@
 //----------------------------------------
 @media (min-width: 1200px) {
   .header__logo {
+    margin-left: -40px;
+    
     img {
       height: 215px;
       width: auto;
@@ -101,5 +103,9 @@
     display: flex;
     align-items: center;
     margin-left: -90px;
+  }
+  
+  .header__wrap  {
+    top: 50px;
   }
 }

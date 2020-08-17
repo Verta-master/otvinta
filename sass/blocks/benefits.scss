@@ -107,11 +107,20 @@
 
 //----------------------------------------
 @media (min-width: 1200px) {
+  .benefits {
+    padding-bottom: 265px;
+    
+    &::after {
+      height: 240px;
+    }
+  }
+  
   .benefits__info {
-    width: 49%;
+    width: 47%;
   }
   
   .benefits__item {
+    margin-bottom: 30px;
     font-size: 20px;
     line-height: 23px;
     
@@ -123,7 +132,16 @@
   
   .benefits__img {
     right: 50%;
+    bottom: 80px;
     left: auto;
     width: auto;
+    
+    img {
+      margin-left: -5px;
+    }
+  }
+  
+  .benefits__title {
+    margin-bottom: 40px;
   }
 }

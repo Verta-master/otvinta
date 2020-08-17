@@ -191,6 +191,7 @@
   
   .modal__imgs {
     width: 48%;
+    margin-top: 0;
   }
   
   .modal__subtitle {
@@ -206,7 +207,7 @@
   }
   
   .modal__slider {
-    height: 541px;
+    height: 500px;
     box-sizing: border-box;
   }
   
@@ -225,6 +226,7 @@
   .modal__slide2 {
     width: 854px;
     margin-right: 26px;
+    margin-bottom: 25px;
   }
   
   .modal__top {
@@ -254,6 +256,7 @@
   
   .modal__bottom {
     padding: 30px;
+    padding-bottom: 20px;
     background-color: #C4C4C4;
   }
 }
