@@ -141,7 +141,7 @@
             <input class="select__date" name="away" type="text" placeholder="Дата полета" required="">
           </li>
           <li class="select__item">
-            <a data-fancybox="" data-src="#data" href="javascript:;" class="btn select__btn"><span>Забронировать</span></a>
+            <!--  Modal form   -->
             <div style="display: none;" id="data" class="select__modal">
               <p class="select__title">Введите  данные пассажиров</p>
               <form action="#" class="select__form">
@@ -197,6 +197,7 @@
               <a href="#" class="select__final-btn select__final-btn--error">Ой, что-то не так, попробуй еще раз?</a>
             </div>
             -->
+            <a href="#" class="btn select__btn select__data"><span>Забронировать</span></a>
           </li>
         </ul>
         <a href="#scroll" type="button" class="promo__scroll"></a>
@@ -675,8 +676,8 @@
             <input class="select__date" name="away" type="text" placeholder="Дата полета" required="">
           </li>
           <li class="select__item">
-            <a data-fancybox="" data-src="#final" href="javascript:;" class="btn select__btn"><span>Забронировать</span></a>
-            <div style="display: none;" id="data" class="select__modal">
+            <!--  Modal form   -->
+            <div style="display: none;" id="data2" class="select__modal">
               <p class="select__title">Введите  данные пассажиров</p>
               <form action="#" class="select__form">
                 <div class="select__number">
@@ -694,7 +695,8 @@
                 <button type="submit" class="select__submit">Забронировать</button>
               </form>
             </div>
-            <div style="display: none;" id="final" class="select__final">
+            <!--  Final window   -->
+            <div style="display: none;" id="final2" class="select__final">
               <div class="select__final-top">
                 <div class="select__header"><span>Иванов Иван Иванович</span></div>
                 <div class="select__body">
@@ -730,6 +732,7 @@
               <a href="#" class="select__final-btn select__final-btn--error">Ой, что-то не так, попробуй еще раз?</a>
             </div>
             -->
+            <a href="#" class="btn select__btn select__data2"><span>Забронировать</span></a>
           </li>
         </ul>
       </div>

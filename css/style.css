@@ -466,7 +466,7 @@ h3,
 
 .header__wrap {
   position: absolute;
-  z-index: 10;
+  z-index: 100;
   left: 0;
   top: 120px;
   padding: 0 20px; }
@@ -745,8 +745,7 @@ p.menu__title {
     height: 34px; } }
 
 .promo {
-  position: relative;
-  overflow: hidden; }
+  position: relative; }
   .promo .title {
     margin-bottom: 35px;
     font-size: 20px;
@@ -781,7 +780,7 @@ p.menu__title {
 
 .promo__wrap {
   position: relative;
-  z-index: 1;
+  z-index: 10;
   padding-top: 45px;
   padding-bottom: 50px;
   background-image: url(../img/images/bg-mobile.png);
@@ -809,6 +808,7 @@ p.menu__title {
   .promo__img {
     padding: 0; }
   .promo {
+    z-index: 10;
     background-color: #FFC925; }
     .promo::after {
       height: 60px;
@@ -1076,7 +1076,8 @@ p.menu__title {
   line-height: 15px;
   text-align: center;
   background-color: #4F4F4F;
-  border: 2px solid #4F4F4F; }
+  border: 2px solid #4F4F4F;
+  border-radius: 20px; }
 
 .select2-search--dropdown {
   padding: 11px; }
@@ -1116,13 +1117,15 @@ p.menu__title {
     text-decoration: underline; }
 
 .select__modal {
+  position: relative;
   width: 277px;
   max-width: 100%;
   padding: 6px 12px;
   padding-bottom: 47px;
   background-color: #E5E5E5;
   border: 2px solid #4F4F4F;
-  border-radius: 20px; }
+  border-radius: 20px;
+  overflow: hidden; }
 
 .select__title {
   font-weight: 400;
@@ -1219,10 +1222,12 @@ textarea.select__input {
   padding: 7px; }
 
 .select__final {
+  position: relative;
   width: 277px;
   max-width: 100%;
   padding: 0;
-  background-color: rgba(255, 255, 255, 0); }
+  background-color: rgba(255, 255, 255, 0);
+  overflow: hidden; }
 
 .select__final-top {
   width: 100%;
@@ -1393,11 +1398,15 @@ textarea.select__input {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
+  .select__list {
+    position: relative; }
   .select__item {
     width: 25%;
     margin-bottom: 0; }
     .select__item:first-child .select2-container--default .select2-selection--single {
       border-radius: 20px 0 0 20px; }
+    .select__item:last-child {
+      position: static; }
   .select2-container--default .select2-selection--single,
   .select__date,
   .select__link {
@@ -1416,26 +1425,27 @@ textarea.select__input {
     height: 52px;
     font-size: 18px;
     font-weight: 400;
-    border-radius: 0 20px 20px 0; } }
-
-@media (min-width: 1200px) {
-  .select2-container--default .select2-selection--single .select2-selection__rendered,
-  .select__date,
-  .select__link,
-  .select__btn {
-    font-size: 22px; }
-  .ui-datepicker {
-    width: 284px; }
+    border-radius: 0 20px 20px 0; }
+  .select__final,
   .select__modal {
-    width: 480px; }
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    z-index: 1000; }
   .select__label {
     width: 318px;
     padding-right: 24px;
-    text-align: center; }
+    text-align: center;
+    font-size: 13px;
+    line-height: 15px; }
     .select__label span {
       -webkit-box-flex: 1;
           -ms-flex-positive: 1;
               flex-grow: 1; }
+  .select__modal {
+    width: 480px; }
   .select__final {
     width: 552px; }
   .select__header {
@@ -1453,6 +1463,15 @@ textarea.select__input {
     width: 277px;
     margin-left: auto;
     margin-right: auto; } }
+
+@media (min-width: 1200px) {
+  .select2-container--default .select2-selection--single .select2-selection__rendered,
+  .select__date,
+  .select__link,
+  .select__btn {
+    font-size: 22px; }
+  .ui-datepicker {
+    width: 284px; } }
 
 .aircraft {
   position: relative;
@@ -1647,7 +1666,7 @@ textarea.select__input {
 
 .order {
   position: relative;
-  z-index: 1;
+  z-index: 10;
   padding-bottom: 35px;
   background-color: #FFC925; }
   .order .title {
@@ -1689,7 +1708,7 @@ textarea.select__input {
   .order__img::after {
     content: "";
     position: absolute;
-    z-index: 3;
+    z-index: 5;
     bottom: -1px;
     left: 0;
     right: 0;
@@ -1728,7 +1747,8 @@ textarea.select__input {
   .order__img::after {
     height: 125px; }
   .order__img {
-    margin-bottom: 20px; } }
+    margin-bottom: 20px;
+    overflow: hidden; } }
 
 .benefits {
   position: relative;

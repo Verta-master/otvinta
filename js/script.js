@@ -20,3 +20,14 @@ $('.promo__scroll').click(function() {
   var top = $(id).offset().top;
   $('body, html').animate({scrollTop: top}, 500);
 });
+
+//Select forms
+$('.select__data').click(function() {
+  event.preventDefault();
+  $('#data').slideToggle();
+});
+
+$('.select__data2').click(function() {
+  event.preventDefault();
+  $('#data2').slideToggle();
+});
