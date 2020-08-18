@@ -12,11 +12,17 @@
   border: 2px solid #4F4F4F;
   border-radius: 20px;
   transition: ease-out 0.3s;
+  overflow: hidden;
+  
+  span {
+    transition: ease-out 0.3s;
+  }
   
   &:hover,
   &:active {
-    color: #4F4F4F;
-    background-color: #E5E5E5;
-    transition: ease-out 0.3s;
+    span {
+      transform: scale(1.2);
+      transition: ease-out 0.3s;
+    }
   }
 }

@@ -58,11 +58,31 @@
 .benefits__img {
   position: relative;
   z-index: 5;
+  overflow: hidden;
   
   img {
     display: block;
     width: 100%;
     height: auto;
+  }
+}
+
+.benefits__img-vint {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  animation: rotation 1.7s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform-origin: 55% 48.6%;
+  }
+  
+  100% {
+    transform-origin: 55% 48.6%;
+    transform: rotate(360deg);
   }
 }
 
@@ -82,7 +102,7 @@
     bottom: 10px;
     left: 0;
     width: 500px;
-    overflow: hidden;
+    overflow: visible;
     
     img {
       margin-left: -30px;
