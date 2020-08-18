@@ -1,6 +1,6 @@
 .promo {
   position: relative;
-//  overflow: hidden;
+  z-index: 10;
   
   .title {
     margin-bottom: 35px;
@@ -11,7 +11,7 @@
   &::after {
     content: "";
     position: absolute;
-    z-index: 5;
+    z-index: 10;
     bottom: -1px;
     left: 0;
     right: 0;
@@ -36,11 +36,17 @@
 }
 
 .promo__img {
+  width: 100%;
+  max-width: 100%;
   padding-top: 10px;
   padding-bottom: 40px;
   background-color: $yellow;
+  overflow: hidden;
   
   img {
+    display: block;
+    width: 100%;
+    height: auto;
     transform: scale(1.1);
   }
 }
@@ -90,7 +96,6 @@
   }
   
   .promo {
-    z-index: 10;
     background-color: $yellow;
     
     &::after {
@@ -105,6 +110,7 @@
   }
   
   .promo__wrap {
+    z-index: 15;
     padding-top: 0;
     padding-bottom: 80px;
     padding-left: 38px;

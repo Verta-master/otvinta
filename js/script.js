@@ -22,12 +22,22 @@ $('.promo__scroll').click(function() {
 });
 
 //Select forms
-$('.select__data').click(function() {
+$('.select__data').click(function(e) {
   event.preventDefault();
+  e.stopPropagation();
   $('#data').slideToggle();
 });
 
-$('.select__data2').click(function() {
+$('.select__data2').click(function(e) {
   event.preventDefault();
+  e.stopPropagation();
   $('#data2').slideToggle();
 });
+
+//Hide popups on escape
+$("body").keydown(function(e) {
+  if (e.keyCode == 27) {
+    $('#data').slideUp();
+    $('#data2').slideUp();
+  }
+})
