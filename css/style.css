@@ -935,10 +935,14 @@ p.menu__title {
   border: 2px solid #4F4F4F;
   border-radius: 20px;
   -webkit-transition: ease-out 0.3s;
-  transition: ease-out 0.3s; }
-  .btn:hover, .btn:active {
-    color: #4F4F4F;
-    background-color: #E5E5E5;
+  transition: ease-out 0.3s;
+  overflow: hidden; }
+  .btn span {
+    -webkit-transition: ease-out 0.3s;
+    transition: ease-out 0.3s; }
+  .btn:hover span, .btn:active span {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
     -webkit-transition: ease-out 0.3s;
     transition: ease-out 0.3s; }
 
@@ -1771,11 +1775,40 @@ textarea.select__input {
 
 .benefits__img {
   position: relative;
-  z-index: 5; }
+  z-index: 5;
+  overflow: hidden; }
   .benefits__img img {
     display: block;
     width: 100%;
     height: auto; }
+
+.benefits__img-vint {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  -webkit-animation: rotation 1.7s linear infinite;
+          animation: rotation 1.7s linear infinite; }
+
+@-webkit-keyframes rotation {
+  0% {
+    -webkit-transform-origin: 55% 48.6%;
+            transform-origin: 55% 48.6%; }
+  100% {
+    -webkit-transform-origin: 55% 48.6%;
+            transform-origin: 55% 48.6%;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes rotation {
+  0% {
+    -webkit-transform-origin: 55% 48.6%;
+            transform-origin: 55% 48.6%; }
+  100% {
+    -webkit-transform-origin: 55% 48.6%;
+            transform-origin: 55% 48.6%;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
 
 @media (min-width: 768px) {
   .benefits {
@@ -1788,7 +1821,7 @@ textarea.select__input {
     bottom: 10px;
     left: 0;
     width: 500px;
-    overflow: hidden; }
+    overflow: visible; }
     .benefits__img img {
       margin-left: -30px; }
   .benefits::after {
