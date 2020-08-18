@@ -1,6 +1,6 @@
 .order {
   position: relative;
-  z-index: 1;
+  z-index: 10;
   padding-bottom: 35px;
   background-color: $yellow;
   
@@ -56,7 +56,7 @@
   &::after {
     content: "";
     position: absolute;
-    z-index: 3;
+    z-index: 5;
     bottom: -1px;
     left: 0;
     right: 0;
@@ -132,5 +132,6 @@
   
   .order__img {
     margin-bottom: 20px;
+    overflow: hidden;
   }
 }

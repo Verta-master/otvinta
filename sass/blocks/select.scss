@@ -98,6 +98,7 @@
   text-align: center;
   background-color: #4F4F4F;
   border: 2px solid #4F4F4F;
+  border-radius: 20px;
 }
 
 .select2-search--dropdown {
@@ -147,6 +148,7 @@
 }
 
 .select__modal {
+  position: relative;
   width: 277px;
   max-width: 100%;
   padding: 6px 12px;
@@ -154,6 +156,7 @@
   background-color: #E5E5E5;
   border: 2px solid #4F4F4F;
   border-radius: 20px;
+  overflow: hidden;
 }
 
 .select__title {
@@ -240,10 +243,12 @@ textarea.select__input {
 }
 
 .select__final {
+  position: relative;
   width: 277px;
   max-width: 100%;
   padding: 0;
   background-color: rgba(255,255,255,0);
+  overflow: hidden;
 }
 
 .select__final-top {
@@ -437,12 +442,20 @@ textarea.select__input {
     display: flex;
   }
   
+  .select__list {
+    position: relative;
+  }
+  
   .select__item {
     width: 25%;
     margin-bottom: 0;
     
     &:first-child .select2-container--default .select2-selection--single {
       border-radius: 20px 0 0 20px;
+    }
+    
+    &:last-child {
+      position: static;
     }
   }
   
@@ -470,33 +483,30 @@ textarea.select__input {
     font-weight: 400;
     border-radius: 0 20px 20px 0;
   }
-}
-
-//----------------------------------------
-@media (min-width: 1200px) {
-  .select2-container--default .select2-selection--single .select2-selection__rendered,
-  .select__date,
-  .select__link,
-  .select__btn {
-    font-size: 22px;
-  }
   
-  .ui-datepicker {
-    width: 284px;
-  }
-  
+  .select__final,
   .select__modal {
-    width: 480px;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
   }
   
   .select__label {
     width: 318px;
     padding-right: 24px;
     text-align: center;
+    font-size: 13px;
+    line-height: 15px;
     
     span {
       flex-grow: 1;
     }
+  }
+  
+  .select__modal {
+    width: 480px;
   }
   
   .select__final {
@@ -528,4 +538,18 @@ textarea.select__input {
     margin-left: auto;
     margin-right: auto;
   }
+}
+
+//----------------------------------------
+@media (min-width: 1200px) {
+  .select2-container--default .select2-selection--single .select2-selection__rendered,
+  .select__date,
+  .select__link,
+  .select__btn {
+    font-size: 22px;
+  }
+  
+  .ui-datepicker {
+    width: 284px;
+  }  
 }
