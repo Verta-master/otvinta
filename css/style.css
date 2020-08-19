@@ -1413,6 +1413,10 @@ textarea.select__input {
     margin-bottom: 0; }
     .select__item:first-child .select2-container--default .select2-selection--single {
       border-radius: 20px 0 0 20px; }
+    .select__item:first-child .select2.select2-container.select2-container--default.select2-container--open.select2-container--above .select2-selection.select2-selection--single {
+      border-radius: 0 0px 0 20px !important; }
+    .select__item:first-child .select2.select2-container.select2-container--default.select2-container--open.select2-container--below .select2-selection.select2-selection--single {
+      border-radius: 20px 0px 0 0px !important; }
     .select__item:last-child {
       position: static; }
   .select2-container--default .select2-selection--single,
@@ -1808,35 +1812,9 @@ textarea.select__input {
   .benefits__img img {
     display: block;
     width: 100%;
-    height: auto; }
-
-.benefits__img-vint {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 10;
-  -webkit-animation: rotation 1.7s linear infinite;
-          animation: rotation 1.7s linear infinite; }
-
-@-webkit-keyframes rotation {
-  0% {
-    -webkit-transform-origin: 55% 48.6%;
-            transform-origin: 55% 48.6%; }
-  100% {
-    -webkit-transform-origin: 55% 48.6%;
-            transform-origin: 55% 48.6%;
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg); } }
-
-@keyframes rotation {
-  0% {
-    -webkit-transform-origin: 55% 48.6%;
-            transform-origin: 55% 48.6%; }
-  100% {
-    -webkit-transform-origin: 55% 48.6%;
-            transform-origin: 55% 48.6%;
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg); } }
+    height: auto;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2); }
 
 @media (min-width: 768px) {
   .benefits {
@@ -1846,12 +1824,13 @@ textarea.select__input {
     margin-left: auto; }
   .benefits__img {
     position: absolute;
-    bottom: 10px;
+    bottom: 130px;
     left: 0;
     width: 500px;
     overflow: visible; }
     .benefits__img img {
-      margin-left: -30px; }
+      -webkit-transform: scale(2);
+              transform: scale(2); }
   .benefits::after {
     height: 100px;
     -webkit-clip-path: polygon(0 0, 100% 100%, 100% 100%, 0 100%);
@@ -1876,11 +1855,12 @@ textarea.select__input {
       line-height: 18px; }
   .benefits__img {
     right: 50%;
-    bottom: 80px;
+    bottom: 200px;
     left: auto;
     width: auto; }
     .benefits__img img {
-      margin-left: -5px; }
+      -webkit-transform: scale(1.7);
+              transform: scale(1.7); }
   .benefits__title {
     margin-bottom: 40px; } }
 
