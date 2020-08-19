@@ -64,25 +64,7 @@
     display: block;
     width: 100%;
     height: auto;
-  }
-}
-
-.benefits__img-vint {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 10;
-  animation: rotation 1.7s linear infinite;
-}
-
-@keyframes rotation {
-  0% {
-    transform-origin: 55% 48.6%;
-  }
-  
-  100% {
-    transform-origin: 55% 48.6%;
-    transform: rotate(360deg);
+    transform: scale(1.2);
   }
 }
 
@@ -99,13 +81,13 @@
   
   .benefits__img {
     position: absolute;
-    bottom: 10px;
+    bottom: 130px;
     left: 0;
     width: 500px;
     overflow: visible;
     
     img {
-      margin-left: -30px;
+      transform: scale(2);
     }
   }
   
@@ -152,12 +134,12 @@
   
   .benefits__img {
     right: 50%;
-    bottom: 80px;
+    bottom: 200px;
     left: auto;
     width: auto;
     
     img {
-      margin-left: -5px;
+      transform: scale(1.7);
     }
   }
   
