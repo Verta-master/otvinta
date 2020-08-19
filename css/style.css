@@ -546,15 +546,17 @@ h3,
   z-index: 1000;
   top: 50px;
   right: 0;
-  width: 310px;
+  width: 350px;
   max-width: 100%;
-  color: #fff;
-  background: rgba(79, 79, 79, 0.95);
-  border-radius: 22px 0px 0px 22px; }
+  color: #fff; }
+  .menu--open .menu__header {
+    border-radius: 22px 0px 0px 0; }
 
-.menu__close,
 .menu__body {
-  display: none; }
+  display: none;
+  padding: 25px 38px;
+  background-color: rgba(79, 79, 79, 0.95);
+  border-radius: 0 0 0 22px; }
 
 .menu__header {
   display: -webkit-box;
@@ -566,7 +568,9 @@ h3,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 10px; }
+  padding: 10px;
+  background-color: rgba(79, 79, 79, 0.95);
+  border-radius: 22px 0px 0px 22px; }
 
 .menu__phone {
   display: block;
@@ -600,6 +604,9 @@ h3,
   border-radius: 7px;
   -webkit-transition: ease-out 0.3s;
   transition: ease-out 0.3s; }
+  .menu__open--hide {
+    opacity: 0;
+    pointer-events: none; }
   .menu__open i {
     display: block; }
   .menu__open:hover, .menu__open:active {
@@ -616,15 +623,17 @@ h3,
   font-size: 16px;
   line-height: 26px;
   border: 1px solid #fff;
-  border-radius: 50%; }
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none; }
+  .menu__close--visible {
+    opacity: 1;
+    pointer-events: all; }
   .menu__close:hover, .menu__close:active {
     color: #FFC925;
     border-color: #FFC925;
     -webkit-transition: ease-out 0.3s;
     transition: ease-out 0.3s; }
-
-.menu__body {
-  padding: 25px 38px; }
 
 .menu__list {
   padding: 0;
@@ -670,8 +679,7 @@ p.menu__title {
 @media (min-width: 768px) {
   .menu {
     top: 46px;
-    width: 367px;
-    border-radius: 48px 0 0 48px; }
+    width: 367px; }
   .menu__open {
     width: 36px;
     height: 36px; }
@@ -689,26 +697,20 @@ p.menu__title {
 
 @media (min-width: 1200px) {
   .menu {
-    width: 494px;
-    -webkit-transition: ease-out 0.3s;
-    transition: ease-out 0.3s; }
-    .menu--open {
-      width: 703px;
+    width: 550px; }
+    .menu--open .menu__phone {
+      color: #fff;
       -webkit-transition: ease-out 0.3s;
       transition: ease-out 0.3s; }
-      .menu--open .menu__phone {
-        margin-left: auto;
-        margin-right: 15px;
-        color: #fff;
+      .menu--open .menu__phone:hover, .menu--open .menu__phone:active {
+        color: #FFC925;
         -webkit-transition: ease-out 0.3s;
         transition: ease-out 0.3s; }
-        .menu--open .menu__phone:hover, .menu--open .menu__phone:active {
-          color: #FFC925;
-          -webkit-transition: ease-out 0.3s;
-          transition: ease-out 0.3s; }
+    .menu--open .menu__header {
+      border-radius: 41px 0 0 0; }
   .menu__header {
     padding: 18px 26px;
-    padding-right: 57px; }
+    border-radius: 41px 0 0 41px; }
   .menu__open {
     width: 46px;
     height: 46px;
@@ -724,7 +726,8 @@ p.menu__title {
     font-size: 15px;
     line-height: 18px; }
   .menu__body {
-    padding: 25px; }
+    padding: 25px;
+    border-radius: 0 0 0 41px; }
   .menu__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -735,7 +738,7 @@ p.menu__title {
         -ms-flex-pack: justify;
             justify-content: space-between; }
   .menu__item {
-    width: 45%; }
+    width: 47%; }
   .menu__sublist {
     padding-left: 20px; }
   .menu__item address {
@@ -1096,6 +1099,13 @@ p.menu__title {
   background: #C4C4C4;
   border-radius: 20px; }
 
+.select2-container--default .select2-search--dropdown .select2-search__field {
+  background-color: #c4c4c4;
+  background-image: url(../img/icons/search.svg);
+  background-repeat: no-repeat;
+  background-size: 14px 16px;
+  background-position: right 10px center; }
+
 .select__btn {
   margin-top: 48px;
   margin-left: auto;
@@ -1412,6 +1422,8 @@ textarea.select__input {
     margin-bottom: 0; }
     .select__item:first-child .select2-container--default .select2-selection--single {
       border-radius: 20px 0 0 20px; }
+    .select__item:first-child .select2 .select2-container .select2-container--default .select2-container--below .select2-container--open .select2-container--open.selection.select2-container--default .select2-selection--single {
+      border-radius: 20px 0 0 0 !important; }
     .select__item:last-child {
       position: static; }
   .select2-container--default .select2-selection--single,
