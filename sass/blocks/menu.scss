@@ -3,16 +3,22 @@
   z-index: 1000;
   top: 50px;
   right: 0;
-  width: 310px;
+  width: 350px;
   max-width: 100%;
   color: #fff;
-  background: rgba(79, 79, 79, 0.95);
-  border-radius: 22px 0px 0px 22px;
+  
+  &--open {
+    .menu__header {
+      border-radius: 22px 0px 0px 0;
+    }
+  }
 }
 
-.menu__close,
 .menu__body {
   display: none;
+  padding: 25px 38px;
+  background-color: rgba(79, 79, 79, 0.95);
+  border-radius: 0 0 0 22px;
 }
 
 .menu__header {
@@ -20,6 +26,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+  background-color: rgba(79, 79, 79, 0.95);
+  border-radius: 22px 0px 0px 22px;
 }
 
 .menu__phone {
@@ -50,6 +58,11 @@
   border-radius: 7px;
   transition: ease-out 0.3s;
   
+  &--hide {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
   i {
     display: block;
   }
@@ -71,6 +84,13 @@
   line-height: 26px;
   border: 1px solid #fff;
   border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  
+  &--visible {
+    opacity: 1;
+    pointer-events: all;
+  }
   
   &:hover,
   &:active {
@@ -78,10 +98,6 @@
     border-color: $yellow;
     transition: ease-out 0.3s;
   }
-}
-
-.menu__body {
-  padding: 25px 38px;
 }
 
 .menu__list {
@@ -139,7 +155,6 @@ p.menu__title {
   .menu {
     top: 46px;
     width: 367px;
-    border-radius: 48px 0 0 48px;
   }
   
   .menu__open {
@@ -170,16 +185,10 @@ p.menu__title {
 //----------------------------------------
 @media (min-width: 1200px) {
   .menu {
-    width: 494px;
-    transition: ease-out 0.3s;
+    width: 550px;
     
     &--open {
-      width: 703px;
-      transition: ease-out 0.3s;
-      
       .menu__phone {
-        margin-left: auto;
-        margin-right: 15px;
         color: #fff;
         transition: ease-out 0.3s;
         
@@ -189,12 +198,16 @@ p.menu__title {
           transition: ease-out 0.3s;
         }
       }
+      
+      .menu__header {
+        border-radius: 41px 0 0 0;
+      }
     }
   }
   
   .menu__header {
     padding: 18px 26px;
-    padding-right: 57px;
+    border-radius: 41px 0 0 41px;
   }
   
   .menu__open {
@@ -221,6 +234,7 @@ p.menu__title {
   
   .menu__body {
     padding: 25px;
+    border-radius: 0 0 0 41px;
   }
   
   .menu__list {
@@ -230,7 +244,7 @@ p.menu__title {
   }
   
   .menu__item {
-    width: 45%;
+    width: 47%;
   }
   
   .menu__sublist {
