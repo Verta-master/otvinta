@@ -1093,15 +1093,18 @@
     var mySwiper5 = new Swiper('.modal__slider', {
       slidesPerView: 1,
       slidesPerColumn: 2,
+      slidesPerColumnFill: 'column',
+      slidesPerGroup: 1,
       spaceBetween: 18,
-      loop: true,
       scrollbar: {
         el: '.modal__scrollbar',
+        draggable: true,
       },
       breakpoints: {
-        1200: {
+        1022: {
           slidesPerView: 1,
           slidesPerColumn: 1,
+          loop: true,
         }
       }
     });
@@ -1112,6 +1115,7 @@
       loop: true,
       scrollbar: {
         el: '.modal__scrollbar2',
+        draggable: true,
       },
     });
   </script>
