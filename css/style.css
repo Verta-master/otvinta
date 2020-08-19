@@ -2239,6 +2239,10 @@ textarea.select__input {
   width: 100%;
   margin-top: 20px; }
 
+.modal__slider {
+  width: 100%;
+  max-width: 100%; }
+
 .modal__slide {
   height: 240px; }
 
@@ -2365,16 +2369,19 @@ textarea.select__input {
     -webkit-box-sizing: border-box;
             box-sizing: border-box; }
   .modal__slide {
-    margin-bottom: 18px; } }
+    margin-bottom: 18px; }
+  .modal__slide2 {
+    margin-right: 26px; } }
 
 @media (min-width: 1200px) {
   .modal--service {
     width: 1268px;
     background-color: #C4C4C4; }
+  .modal__slider2 {
+    margin-bottom: 25px; }
   .modal__slide2 {
     width: 854px;
-    margin-right: 26px;
-    margin-bottom: 25px; }
+    margin-right: 26px; }
   .modal__top {
     padding: 30px; }
   .modal__text {

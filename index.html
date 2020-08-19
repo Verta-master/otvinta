@@ -200,7 +200,7 @@
             <a href="#" class="btn select__btn select__data"><span>Забронировать</span></a>
           </li>
         </ul>
-        <a href="#scroll" type="button" class="promo__scroll"></a>
+        <a href="#scroll" class="promo__scroll"></a>
       </div>
     </section>
     
@@ -682,8 +682,8 @@
               <form action="#" class="select__form">
                 <div class="select__number">
                   <button type="button" class="select__num"><i class="fas fa-arrow-left"></i></button>
-                  <label for="number" class="select__label">
-                    <input type="text" id="number" class="select__circle" value="1">
+                  <label for="number2" class="select__label">
+                    <input type="text" id="number2" class="select__circle" value="1">
                     <span>Количество пассажиров</span>
                   </label>
                   <button type="button" class="select__num"><i class="fas fa-arrow-right"></i></button>
@@ -1020,6 +1020,10 @@
 
   <!-- Sliders -->
   <script>
+    $().fancybox({
+	   backFocus : false
+	});
+	
     var mySwiper1 = new Swiper ('.aircraft__slider--01', {
       preventClicks: false,
       preventClicksPropagation: false,
@@ -1090,11 +1094,13 @@
       slidesPerView: 1,
       slidesPerColumn: 2,
       spaceBetween: 18,
+      loop: true,
       scrollbar: {
         el: '.modal__scrollbar',
       },
       breakpoints: {
         1200: {
+          slidesPerView: 1,
           slidesPerColumn: 1,
         }
       }
@@ -1103,6 +1109,7 @@
     var mySwiper6 = new Swiper('.modal__slider2', {
       slidesPerView: 'auto',
       spaceBetween: 26,
+      loop: true,
       scrollbar: {
         el: '.modal__scrollbar2',
       },
