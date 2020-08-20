@@ -1067,9 +1067,10 @@ p.menu__title {
   .select__date::placeholder {
     opacity: 1; }
 
+.select2-container--default .select2-results__option[aria-selected=true],
 .select2-container--default .select2-results__option--highlighted[aria-selected] {
-  color: #4F4F4F;
-  background-color: #C4C4C4; }
+  color: #4F4F4F !important;
+  background-color: #C4C4C4 !important; }
 
 .select2-dropdown {
   color: #E5E5E5;
@@ -1096,6 +1097,9 @@ p.menu__title {
   background-repeat: no-repeat;
   background-size: 14px 16px;
   background-position: right 10px center; }
+
+.select2-dropdown--below .select2-results .select2-results__option:last-child {
+  border-radius: 0 0 16px 16px !important; }
 
 .select__btn {
   margin-top: 48px;
