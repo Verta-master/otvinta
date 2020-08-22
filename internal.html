@@ -299,6 +299,20 @@
     $(function() {
       $('.select__date').datepicker();
     });
+    
+    if (window.innerWidth < 768) {
+      var btnHeight = 38;
+    } else {
+      var btnHeight = 52;
+    }
+    
+    $('.select__date').click(function(){
+      var popup = $(this).offset();
+      var popupTop = popup.top + btnHeight;
+      $('.ui-datepicker').css({
+        'top' : popupTop
+       });
+    });
   </script>
 </body>
 </html>
