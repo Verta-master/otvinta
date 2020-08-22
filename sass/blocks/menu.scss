@@ -1,5 +1,5 @@
 .menu {
-  position: absolute;
+  position: fixed;
   z-index: 1000;
   top: 50px;
   right: 0;
@@ -12,6 +12,8 @@
 
 .menu__body {
   display: none;
+  max-height: calc(100vh - 100px);
+  overflow-y: scroll;
   padding: 25px 38px;
 }
 
