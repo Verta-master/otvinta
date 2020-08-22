@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.css">
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="css/select2.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -743,17 +744,18 @@
         <div class="benefits__info">
           <p class="benefits__title">Почему выбирают „ОТ ВИНТА”</p>
           <ul class="benefits__list">
-            <li class="benefits__item">У нас - Надежная техника<span>Современные воздушные суда Robinson R44 и Robinson R66</span></li>
-            <li class="benefits__item">У нас - Низкие цены<span>У нас одни из самых доступных цен на рынке. Обращайтесь.</span></li>
-            <li class="benefits__item">У нас - Опытные пилоты<span>У нас работают профессиональные пилоты с 30 летним опытом, имеющие необходимые допуски.</span></li>
-            <li class="benefits__item">У нас - Безопасный полет<span>Все пассажиры на время полета, на любом ВС, в соответствии законодательства РФ - застрахованы.</span></li>
-            <li class="benefits__item">У нас есть всё необходимые <span>Имеются в наличии Сертификаты и разрешающие документы на полеты, на территории России.</span></li>
-            <li class="benefits__item"><span>В связи с предупреждением заболевания COVID-19 мы дополнительно обрабатываем все ВС, чтобы ваш полет проходил комфортно и безопасно на все 100%. </span></li>
+            <li class="benefits__item wow animate__fadeInUp" data-wow-offset="100">У нас - Надежная техника<span>Современные воздушные суда Robinson R44 и Robinson R66</span></li>
+            <li class="benefits__item wow animate__fadeInUp" data-wow-offset="120" data-wow-duration="1s">У нас - Низкие цены<span>У нас одни из самых доступных цен на рынке. Обращайтесь.</span></li>
+            <li class="benefits__item wow animate__fadeInUp" data-wow-offset="140" data-wow-duration="1s">У нас - Опытные пилоты<span>У нас работают профессиональные пилоты с 30 летним опытом, имеющие необходимые допуски.</span></li>
+            <li class="benefits__item wow animate__fadeInUp" data-wow-offset="160" data-wow-duration="1s">У нас - Безопасный полет<span>Все пассажиры на время полета, на любом ВС, в соответствии законодательства РФ - застрахованы.</span></li>
+            <li class="benefits__item wow animate__fadeInUp" data-wow-offset="180" data-wow-duration="1s">У нас есть всё необходимые <span>Имеются в наличии Сертификаты и разрешающие документы на полеты, на территории России.</span></li>
+            <li class="benefits__item wow animate__fadeInUp" data-wow-offset="200" data-wow-duration="1s"><span>В связи с предупреждением заболевания COVID-19 мы дополнительно обрабатываем все ВС, чтобы ваш полет проходил комфортно и безопасно на все 100%.</span></li>
           </ul>
         </div>
       </div>
       <figure class="benefits__img">
-        <img src="img/images/helicopter.gif" alt="ОТ ВИНТА">
+        <img src="img/images/helicopter-body.png" alt="ОТ ВИНТА" class="benefits__img-body">
+        <img src="img/images/helicopter-vint.png" alt="ОТ ВИНТА" class="benefits__img-vint">
       </figure>
     </section>
     
@@ -1017,6 +1019,16 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="js/jquery.nicescroll.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/wow/0.1.12/wow.min.js"></script>
+  
+  <script>
+    //Animation
+    wow = new WOW({
+      animateClass: 'animate__animated',
+    })
+    wow.init();
+  </script>
 
   <!-- Sliders -->
   <script>
@@ -1163,6 +1175,10 @@
   <script>
     var image = document.getElementsByClassName('order__pic');
     new simpleParallax(image);
+  </script>
+  
+  <script>
+    $('.menu__body').niceScroll();
   </script>
 </body>
 </html>

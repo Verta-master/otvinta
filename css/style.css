@@ -542,7 +542,7 @@ h3,
     top: 40px; } }
 
 .menu {
-  position: absolute;
+  position: fixed;
   z-index: 1000;
   top: 50px;
   right: 0;
@@ -554,6 +554,8 @@ h3,
 
 .menu__body {
   display: none;
+  max-height: calc(100vh - 100px);
+  overflow-y: scroll;
   padding: 25px 38px; }
 
 .menu__header {
@@ -1833,9 +1835,25 @@ textarea.select__input {
   .benefits__img img {
     display: block;
     width: 100%;
-    height: auto;
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2); }
+    height: auto; }
+
+.benefits__img-vint {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 5;
+  -webkit-animation: rotation 2.5s linear infinite;
+          animation: rotation 2.5s linear infinite; }
+
+@-webkit-keyframes rotation {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes rotation {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
 
 @media (min-width: 768px) {
   .benefits {
@@ -1846,13 +1864,10 @@ textarea.select__input {
   .benefits__img {
     display: block;
     position: absolute;
-    bottom: 130px;
+    bottom: 10px;
     left: 0;
     width: 500px;
     overflow: visible; }
-    .benefits__img img {
-      -webkit-transform: scale(2);
-              transform: scale(2); }
   .benefits::after {
     height: 100px;
     -webkit-clip-path: polygon(0 0, 100% 100%, 100% 100%, 0 100%);
@@ -1877,12 +1892,10 @@ textarea.select__input {
       line-height: 18px; }
   .benefits__img {
     right: 50%;
-    bottom: 200px;
+    bottom: 50px;
     left: auto;
-    width: auto; }
-    .benefits__img img {
-      -webkit-transform: scale(1.7);
-              transform: scale(1.7); }
+    width: auto;
+    max-width: 760px; }
   .benefits__title {
     margin-bottom: 40px; } }
 
