@@ -550,7 +550,13 @@ h3,
   max-width: 100%;
   color: #fff;
   border-radius: 22px 0 0 22px;
-  background-color: rgba(79, 79, 79, 0.95); }
+  background-color: rgba(79, 79, 79, 0.95);
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s; }
+  .menu--scroll {
+    top: 5px !important;
+    -webkit-transition: ease-out 0.3s;
+    transition: ease-out 0.3s; }
 
 .menu__body {
   display: none;
