@@ -11,6 +11,7 @@
   }
   
   &::after {
+    display: none;
     content: "";
     position: absolute;
     z-index: 5;
@@ -79,6 +80,10 @@
   .info__contacts {
     width: 360px;
     max-width: 100%;
+  }
+  
+  .info::after {
+    display: block;
   }
 }
 

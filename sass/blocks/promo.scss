@@ -32,6 +32,10 @@
     &::after {
       display: none;
     }
+    
+    .promo__scroll {
+      display: block;
+    }
   }
 }
 
@@ -53,6 +57,14 @@
 
 .promo__scroll {
   display: none;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+  width: 24px;
+  height: 82px;
+  background-image: url(../img/icons/mouse.png);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .promo__wrap {
@@ -129,14 +141,6 @@
   
   .promo__scroll {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 60px;
-    width: 24px;
-    height: 82px;
-    background-image: url(../img/icons/mouse.png);
-    background-repeat: no-repeat;
-    background-size: contain;
   }
   
   .promo--internal {

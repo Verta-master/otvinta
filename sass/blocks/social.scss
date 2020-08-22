@@ -15,11 +15,10 @@
 .social__link {
   width: 20px;
   height: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
   font-size: 10px;
-  line-height: 1;
+  line-height: 18px;
+  text-align: center;
   color: rgba(255,255,255,0.7);
   border-radius: 50%;
   border: 1px solid rgba(255,255,255,0.7);
@@ -27,6 +26,8 @@
   
   i {
     display: block;
+    line-height: 20px;
+    text-align: center;
   }
   
   &:hover,
@@ -42,6 +43,11 @@
   .social__link {
     width: 23px;
     height: 23px;
+    line-height: 21px;
+    
+    i {
+      line-height: 23px;
+    }
   }
 }
 
@@ -51,6 +57,11 @@
     width: 32px;
     height: 32px;
     font-size: 16px;
+    line-height: 29px;
+    
+    i {
+      line-height: 32px;
+    }
   }
   
   .social__item {

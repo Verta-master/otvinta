@@ -68,6 +68,7 @@
 }
 
 .menu__close {
+  display: block;
   width: 26px;
   height: 26px;
   color: #fff;
@@ -78,6 +79,11 @@
   border-radius: 50%;
   opacity: 0;
   pointer-events: none;
+  
+  i {
+    display: block;
+    line-height: 22px;
+  }
   
   &--visible {
     opacity: 1;
@@ -241,5 +247,9 @@ p.menu__title {
   .menu__close {
     width: 34px;
     height: 34px;
+    
+    i {
+      line-height: 30px;
+    }
   }
 }
