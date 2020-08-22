@@ -13,6 +13,14 @@ $('.menu__close').click(function() {
   $('.menu').removeClass('menu--open');
 });
 
+$(window).scroll(function(){
+  if ((window.pageYOffset || document.documentElement.scrollTop ||document.body.scrollTop) >= 100) {
+    $('.menu').addClass('menu--scroll');
+  } else {
+    $('.menu').removeClass('menu--scroll');
+  };
+});
+
 //scroll to arrow anchors
 $('.promo__scroll').click(function() {
   event.preventDefault();
