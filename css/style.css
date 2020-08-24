@@ -1781,18 +1781,25 @@ textarea.select__input {
     padding-bottom: 130px; }
   .order::before {
     height: 1252px;
-    top: 100px; }
+    top: 50px; }
   .order__img::before {
     height: 145px; }
   .order__img::after {
     height: 125px; }
   .order__img {
+    height: 800px;
     margin-bottom: 20px;
     overflow: hidden; } }
 
+@media (min-width: 1500px) {
+  .order__img {
+    height: 1000px; }
+  .order::before {
+    top: 100px; } }
+
 .benefits {
   position: relative;
-  z-index: 1;
+  z-index: 10;
   padding-top: 20px;
   padding-bottom: 100px;
   background-color: #FFC925; }
@@ -1816,6 +1823,8 @@ textarea.select__input {
   line-height: 21px; }
 
 .benefits__list {
+  position: relative;
+  z-index: 5;
   padding: 0;
   margin: 0;
   margin-bottom: 15px;
@@ -1834,10 +1843,12 @@ textarea.select__input {
     margin-bottom: 0; }
 
 .benefits__img {
-  display: none;
-  position: relative;
-  z-index: 5;
-  overflow: hidden; }
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  overflow: hidden;
+  width: 100%;
+  opacity: 0.4; }
   .benefits__img img {
     display: block;
     width: 100%;
@@ -1873,7 +1884,8 @@ textarea.select__input {
     bottom: 10px;
     left: 0;
     width: 500px;
-    overflow: visible; }
+    overflow: visible;
+    opacity: 1; }
   .benefits::after {
     height: 100px;
     -webkit-clip-path: polygon(0 0, 100% 100%, 100% 100%, 0 100%);
