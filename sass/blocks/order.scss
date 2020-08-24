@@ -119,7 +119,7 @@
   
   .order::before {
     height: 1252px;
-    top: 100px;
+    top: 50px;
   }
   
   .order__img::before {
@@ -131,7 +131,19 @@
   }
   
   .order__img {
+    height: 800px;
     margin-bottom: 20px;
     overflow: hidden;
+  }
+}
+
+//----------------------------------------
+@media (min-width: 1500px) {
+  .order__img {
+    height: 1000px;
+  }
+  
+  .order::before {
+    top: 100px;
   }
 }
